@@ -1,0 +1,38 @@
+.Backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 400ms ease-out;
+}
+
+.BackdropOpen {
+  animation: openBackdrop 400ms ease-out forwards;
+}
+
+.BackdropClosed {
+  animation: closeBackdrop 400ms ease-out forwards;
+}
+
+@keyframes openBackdrop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeBackdrop {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
